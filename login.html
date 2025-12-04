@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/login.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+        <title>회원가입</title>
+    </head>
+    <body>
+        <div id="login_container">
+            <a href="index.html" class="logo-link"><img src="img/Property 1=lg.png" /></a>
+            <form action="/login" method="post">
+                <div class="input_box">
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" name="email" required placeholder=" " />
+                    <span class="error-message" data-error="invalid">잘못된 이메일 형식입니다.</span>
+                </div>
+
+                <div class="input_box">
+                    <label for="password">비밀번호</label>
+                    <input type="password" id="password" name="password" required minlength="8" placeholder=" " />
+                    <img src="/img/eyes.png" alt="" class="input-icon" />
+                    <span class="error-message" data-error="short">비밀번호를 8자 이상 입력해주세요.</span>
+                </div>
+
+                <button type="submit">로그인</button>
+            </form>
+            <div class="easy_log">
+                <ul>
+                    <li>간편 로그인하기</li>
+                    <li>
+                        <ul class="icon">
+                            <a href="#"
+                                ><li><img src="img/google.png" /></li
+                            ></a>
+                            <a href="#"
+                                ><li><img src="img/kakao.png" /></li
+                            ></a>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="signup_link">판다마켓이 처음이신가요? <a href="join.html">회원가입</a></div>
+        </div>
+    </body>
+</html>
