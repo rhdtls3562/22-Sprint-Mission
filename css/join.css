@@ -1,10 +1,12 @@
-#login_container {
+.login-container {
     width: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding: 80px 20px;
+    box-sizing: border-box;
 }
 
 .logo-link img {
@@ -12,9 +14,11 @@
     width: 100%;
 }
 
-.input_box {
+fieldset.input_box {
     position: relative;
     margin-bottom: 24px;
+    border: none;
+    padding: 0;
 }
 
 .input_box img {
@@ -35,7 +39,7 @@ label {
 input {
     border-radius: 12px;
     border: 2px solid transparent;
-    background-color: #f3f4f6;
+    background-color: var(--gray100);
     width: 640px;
     padding: 20px;
     box-sizing: border-box;
@@ -97,7 +101,7 @@ button {
     margin-bottom: 24px;
     border-radius: 40px;
     border: none;
-    background-color: #9ca3af;
+    background-color: var(--gray400);
     box-sizing: border-box;
     width: 100%;
     color: #fff;
@@ -108,16 +112,19 @@ button {
 
 /* 모든 input이 valid일 때 버튼 활성화 */
 form:valid button {
-    background-color: #3692ff;
+    background-color: var(--blue);
 }
 
-.easy_log {
+aside.easy_log {
     padding: 16px 24px;
     box-sizing: border-box;
     border-radius: 8px;
     background-color: #e6f2ff;
     width: 640px;
     margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .icon {
@@ -134,32 +141,35 @@ form:valid button {
     align-items: center;
 }
 
-.easy_log img {
+aside.easy_log img {
     width: 22px;
     display: block;
     margin: 0 auto;
 }
 
-.icon a:nth-child(1) {
+.icon li:nth-child(1) a {
     border-radius: 100%;
-    border: 1px solid #f9fafb;
+    border: 1px solid var(--gray50);
     background-color: #fff;
-}
-
-.icon a:nth-child(2) {
-    border-radius: 100%;
-    border: 1px solid #f9fafb;
-    background-color: #f5e14b;
-}
-
-.easy_log > ul:nth-child(1) {
-    box-sizing: border-box;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    width: 50px;
+    height: 50px;
+}
+
+.icon li:nth-child(2) a {
+    border-radius: 100%;
+    border: 1px solid var(--gray50);
+    background-color: #f5e14b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
 }
 
 .signup_link a {
     text-decoration: underline;
-    color: #3692ff;
+    color: var(--blue);
 }
